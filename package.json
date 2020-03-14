@@ -24,6 +24,7 @@
     "jasmine": "^3.5.0",
     "mocha": "^5.2.0",
     "mochawesome": "^3.0.3",
+    "protractor": "^5.4.3",
     "selenium-webdriver": "^4.0.0-alpha.7"
   }
 }
