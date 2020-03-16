@@ -6,9 +6,9 @@ const createRandom = (min = 1, max = 10) => {
     counter++;
     arrayOfRandomIntegers.push(randomValue);
   }
-  return arrayOfRandomIntegers.join('');
-}
+  return arrayOfRandomIntegers.join("");
+};
 
-  module.exports = {
-    createRandom
-  }
+module.exports = {
+  createRandom
+};
