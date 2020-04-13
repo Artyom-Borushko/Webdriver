@@ -43,7 +43,7 @@ describe('Protractor Demo App', () => {
 	});
 
 	it('switch to nasdaq home page', () => {
-		browser.ignoreSynchronization = true;
+		browser.waitForAngularEnabled(false);
 		browser.get('https://www.nasdaq.com/');
 		browser.wait(EC.titleContains('Daily Stock Market Overview'), 5000, 'Time has expired');
 		expect(browser.getTitle()).toEqual('Daily Stock Market Overview, Data Updates, Reports & News | Nasdaq');

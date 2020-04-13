@@ -1,9 +1,14 @@
 ## Protractor
 ```
-npm run test-protractor
+npm run test-blender
 ```
 
 ## Webdriver
 ```
-node webdriver_async
+npm run test-webdriver
+```
+
+## Page object protractor
+```
+npm run test-shutterstock
 ```

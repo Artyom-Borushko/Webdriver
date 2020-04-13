@@ -4,7 +4,11 @@
   "description": "Google home page automated test ",
   "main": "index.js",
   "scripts": {
-    "test-protractor": "protractor ./Protractor/test/conf.js"
+    "update-webdriver": "webdriver-manager update",
+    "start-webdriver": "webdriver-manager start",
+    "test-blender": "protractor ./protractor/test/conf.js",
+    "test-shutterstock": "protractor ./design_pattern_for_pages_webdriver/config/config.js",
+    "test-webdriver": "node ./webdriver/webdriver_async"
   },
   "repository": {
     "type": "git",
