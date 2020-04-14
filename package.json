@@ -8,7 +8,8 @@
     "start-webdriver": "webdriver-manager start",
     "test-blender": "protractor ./protractor/test/conf.js",
     "test-shutterstock": "protractor ./design_pattern_for_pages_webdriver/config/config.js",
-    "test-webdriver": "node ./webdriver/webdriver_async"
+    "test-webdriver": "node ./webdriver/webdriver_async",
+    "test-wd-advanced": "protractor ./selenium_wd_advanced/config/config.js"
   },
   "repository": {
     "type": "git",
