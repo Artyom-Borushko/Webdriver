@@ -14,7 +14,7 @@ class RegistrationPage extends BasePage {
 
 
 	async submitRegistration() {
-		await this.emailInputField.get(2).sendKeys('letmeenterpls14@gmail.com');
+		await this.emailInputField.get(2).sendKeys('letmeenterpls15@gmail.com');
 		await this.passwordInputField.get(2).sendKeys('iwanttoenterpls');
 		await this.confirmRegistrationButton.get(2).click();
 	}

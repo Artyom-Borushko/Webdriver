@@ -1,5 +1,6 @@
 const Footer = require('./common/footerComponent');
 const Header = require('./common/headerComponent');
+const SearchBox = require('./common/searchBoxComponent');
 
 const EC = protractor.ExpectedConditions;
 
@@ -7,6 +8,7 @@ class BasePage {
 	constructor() {
 		this.header = new Header();
 		this.footer = new Footer();
+		this.searchBox = new SearchBox();
 	}
 
 	async getCurrentUrl() {
