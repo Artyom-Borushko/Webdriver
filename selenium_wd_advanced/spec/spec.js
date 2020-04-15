@@ -2,7 +2,7 @@
 
 const PageFactory = require('../page_objects/pageFactory');
 
-describe('Registration on the site', () => {
+fdescribe('Registration on the site', () => {
 	it('should check page title of home page with no logged in user', async () => {
 		await PageFactory.getPage('Home').open();
 		const homePageTitleWithNoLoggedInUser = await PageFactory.getPage('Home')
@@ -51,3 +51,9 @@ describe('Action implementation', () => {
 		return expect(url).toBe('https://www.shutterstock.com/pricing');
 	});
 });
+
+// fdescribe('JavaScript Executor usage', async () => {
+// 	it('test smth', async () => {
+// 		asdasd;
+// 	});
+// });

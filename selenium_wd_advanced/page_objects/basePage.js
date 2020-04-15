@@ -21,6 +21,16 @@ class BasePage {
 		browser.switchTo().window(handles[1]);
 	}
 
+	// eslint-disable-next-line protractor/no-shadowing
+	async highlight(element) {
+		const oldBackgroundColor = await element.getCssValue('backgroundColor');
+		// eslint-disable-next-line no-useless-concat
+		await browser.executeScript("arguments[0].style.backgroundColor = '" + 'red' + "'", element);
+		await browser.sleep(500);
+		await browser.executeScript(`arguments[0].style.backgroundColor = '${oldBackgroundColor}'`, element);
+		return browser.sleep(500);
+	}
+
 	async open() {
 		browser.get(`https://www.shutterstock.com/en/${this.url}`);
 		return browser.wait(EC.visibilityOf(this.header.logo), 5000, 'Waiting time has expired');
