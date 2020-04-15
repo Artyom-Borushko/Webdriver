@@ -2,7 +2,9 @@
 
 const PageFactory = require('../page_objects/pageFactory');
 
-fdescribe('Registration on the site', () => {
+const EC = protractor.ExpectedConditions;
+
+describe('Registration on the site', () => {
 	it('should check page title of home page with no logged in user', async () => {
 		await PageFactory.getPage('Home').open();
 		const homePageTitleWithNoLoggedInUser = await PageFactory.getPage('Home')
@@ -52,8 +54,20 @@ describe('Action implementation', () => {
 	});
 });
 
-// fdescribe('JavaScript Executor usage', async () => {
-// 	it('test smth', async () => {
-// 		asdasd;
-// 	});
-// });
+fdescribe('JavaScript Executor usage', () => {
+	it('should have access to shutterstock.com', async () => {
+		await PageFactory.getPage('Home').open();
+		const homePageTitleWithNoLoggedInUser = await PageFactory.getPage('Home')
+			.checkPageTitle('Stock Images, Photos, Vectors, Video, and Music | Shutterstock');
+		return expect(homePageTitleWithNoLoggedInUser).toBe(true);
+	});
+
+	it('should be able to open privacy policy', async () => {
+		const policyOfPrivacy = await PageFactory.getPage('Home').footer.privacyPolicy;
+		await PageFactory.getPage('Home').scrollToElement(policyOfPrivacy);
+		policyOfPrivacy.click();
+		await browser.wait(EC.titleIs('Privacy Policy - Shutterstock'), 15000, 'Waiting time has expired');
+		const url = browser.getCurrentUrl();
+		return expect(url).toBe('https://www.shutterstock.com/privacy');
+	});
+});

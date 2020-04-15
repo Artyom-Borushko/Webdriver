@@ -30,6 +30,10 @@ class BasePage {
 		return browser.sleep(500);
 	}
 
+	async scrollToElement(element) {
+		await browser.executeScript('arguments[0].scrollIntoView(true);', element);
+	}
+
 	async open() {
 		browser.get(`https://www.shutterstock.com/en/${this.url}`);
 		return browser.wait(EC.visibilityOf(this.header.logo), 5000, 'Waiting time has expired');

@@ -9,7 +9,6 @@ class HomePage extends BasePage {
 		this.acceptCookieButton = $('.Eu_acceptCookies_link');
 	}
 
-
 	async openPeoplePhotoCategory() {
 		const imageLink = this.header.imagesLink;
 		const photoCategories = await this.header.imagesLinkDropdownMenu.get(5);
