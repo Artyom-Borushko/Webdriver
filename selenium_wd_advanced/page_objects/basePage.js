@@ -1,3 +1,4 @@
+/* eslint-disable protractor/no-shadowing */
 const Footer = require('./common/footerComponent');
 const Header = require('./common/headerComponent');
 const SearchBox = require('./common/searchBoxComponent');
@@ -21,11 +22,9 @@ class BasePage {
 		browser.switchTo().window(handles[1]);
 	}
 
-	// eslint-disable-next-line protractor/no-shadowing
 	async highlight(element) {
 		const oldBackgroundColor = await element.getCssValue('backgroundColor');
-		// eslint-disable-next-line no-useless-concat
-		await browser.executeScript("arguments[0].style.backgroundColor = '" + 'red' + "'", element);
+		await browser.executeScript("arguments[0].style.backgroundColor = 'red'", element);
 		await browser.sleep(500);
 		await browser.executeScript(`arguments[0].style.backgroundColor = '${oldBackgroundColor}'`, element);
 		return browser.sleep(500);
