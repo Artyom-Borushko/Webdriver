@@ -30,7 +30,7 @@ describe('Registration on the site', () => {
 	});
 });
 
-describe('Action implementation', () => {
+fdescribe('Action implementation', () => {
 	it('should have access to shutterstock.com', async () => {
 		await PageFactory.getPage('Home').open();
 		const homePageTitleWithNoLoggedInUser = await PageFactory.getPage('Home')
@@ -54,7 +54,7 @@ describe('Action implementation', () => {
 	});
 });
 
-fdescribe('JavaScript Executor usage', () => {
+describe('JavaScript Executor usage', () => {
 	it('should have access to shutterstock.com', async () => {
 		await PageFactory.getPage('Home').open();
 		const homePageTitleWithNoLoggedInUser = await PageFactory.getPage('Home')

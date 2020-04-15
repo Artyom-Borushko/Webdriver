@@ -12,7 +12,7 @@ exports.config = {
 		browserName: 'chrome',
 	},
 
-	baseUrl: 'localhost',
+	seleniumAddress: 'http://localhost:4444/wd/hub',
 
 	onPrepare: () => {
 		browser.waitForAngularEnabled(false);
