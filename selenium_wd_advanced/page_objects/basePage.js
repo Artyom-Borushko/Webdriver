@@ -15,6 +15,11 @@ class BasePage {
 		return browser.getCurrentUrl();
 	}
 
+	async switchToTheFirstNewWindow() {
+		browser.sleep(200);
+		const handles = await browser.getAllWindowHandles();
+		browser.switchTo().window(handles[1]);
+	}
 
 	async open() {
 		browser.get(`https://www.shutterstock.com/en/${this.url}`);

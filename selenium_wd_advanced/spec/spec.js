@@ -28,7 +28,7 @@ describe('Registration on the site', () => {
 	});
 });
 
-fdescribe('Action implementation', () => {
+describe('Action implementation', () => {
 	it('should have access to shutterstock.com', async () => {
 		await PageFactory.getPage('Home').open();
 		const homePageTitleWithNoLoggedInUser = await PageFactory.getPage('Home')
@@ -41,5 +41,13 @@ fdescribe('Action implementation', () => {
 		await PageFactory.getPage('People').waitForPeoplePhotoPageLoad();
 		const url = browser.getCurrentUrl();
 		return expect(url).toBe('https://www.shutterstock.com/category/people');
+	});
+
+	it('should be able to see pricing on people photo category page and open it on the new window', async () => {
+		await PageFactory.getPage('People').openPricingInNewWindow();
+		await PageFactory.getPage().switchToTheFirstNewWindow();
+		await PageFactory.getPage('People').waitForPhotoPricingPageLoad();
+		const url = browser.getCurrentUrl();
+		return expect(url).toBe('https://www.shutterstock.com/pricing');
 	});
 });
