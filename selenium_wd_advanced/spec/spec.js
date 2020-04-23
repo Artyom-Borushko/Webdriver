@@ -4,7 +4,7 @@ const PageFactory = require('../page_objects/pageFactory');
 
 const EC = protractor.ExpectedConditions;
 
-describe('Registration on the site', () => {
+fdescribe('Registration on the site', () => {
 	it('should check page title of home page with no logged in user', async () => {
 		await PageFactory.getPage('Home').open();
 		const homePageTitleWithNoLoggedInUser = await PageFactory.getPage('Home')
@@ -30,7 +30,7 @@ describe('Registration on the site', () => {
 	});
 });
 
-fdescribe('Action implementation', () => {
+describe('Action implementation', () => {
 	it('should have access to shutterstock.com', async () => {
 		await PageFactory.getPage('Home').open();
 		const homePageTitleWithNoLoggedInUser = await PageFactory.getPage('Home')
@@ -54,7 +54,7 @@ fdescribe('Action implementation', () => {
 	});
 });
 
-describe('JavaScript Executor usage', () => {
+fdescribe('JavaScript Executor usage', () => {
 	it('should have access to shutterstock.com', async () => {
 		await PageFactory.getPage('Home').open();
 		const homePageTitleWithNoLoggedInUser = await PageFactory.getPage('Home')

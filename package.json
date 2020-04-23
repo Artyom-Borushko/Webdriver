@@ -9,7 +9,8 @@
     "test-blender": "protractor ./protractor/test/conf.js",
     "test-shutterstock": "protractor ./design_pattern_for_pages_webdriver/config/config.js",
     "test-webdriver": "node ./webdriver/webdriver_async",
-    "test-wd-advanced": "protractor ./selenium_wd_advanced/config/config.js"
+    "test-wd-advanced": "protractor ./selenium_wd_advanced/config/config.js",
+    "test-ta-frameworks": "protractor ./basic_knowledge_of_TA_frameworks/config/config.js"
   },
   "repository": {
     "type": "git",
@@ -30,7 +31,8 @@
     "mocha": "^5.2.0",
     "mochawesome": "^3.0.3",
     "protractor": "^5.4.3",
-    "selenium-webdriver": "^4.0.0-alpha.7"
+    "selenium-webdriver": "^4.0.0-alpha.7",
+    "winston": "^3.2.1"
   },
   "devDependencies": {
     "eslint": "^6.8.0",

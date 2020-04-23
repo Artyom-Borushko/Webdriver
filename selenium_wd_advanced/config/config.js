@@ -1,9 +1,10 @@
 exports.config = {
 
 	directConnect: true,
-
+	ignoreUncaughtExceptions: true,
 	framework: 'jasmine',
-
+	allScriptsTimeout: 200000,
+	getPageTimeout: 200000,
 	specs: [
 		'../spec/*.js',
 	],
