@@ -1,6 +1,7 @@
 const { After, Status } = require('cucumber');
 
 const { setDefaultTimeout } = require('cucumber');
+const logger = require('../config/loggerConfig');
 
 setDefaultTimeout(60 * 1000);
 
@@ -11,5 +12,5 @@ After((testCase) => {
 			return this.attach(decodedImage, 'image/png');
 		});
 	}
-	return console.log('Test case pass without errors');
+	return logger.info('Test pass without errors');
 });

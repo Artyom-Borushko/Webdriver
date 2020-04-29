@@ -17,10 +17,6 @@ class HomePage extends BasePage {
 			.click()
 			.perform();
 	}
-
-	// async search(textToSearchFor) {
-	// 	return this.searchBox.search(textToSearchFor);
-	// }
 }
 
 

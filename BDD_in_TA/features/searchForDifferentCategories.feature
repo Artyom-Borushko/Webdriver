@@ -12,13 +12,3 @@ Feature: Search for different photo categories
         | people     | https://www.shutterstock.com/search/people     |
         | technology | https://www.shutterstock.com/search/technology |
         | food       | https://www.shutterstock.com/search/food       |
-
-
-# https://www.shutterstock.com/search/people
-# https://www.shutterstock.com/search/technology
-# https://www.shutterstock.com/search/food
-
-
-# People Images, Stock Photos & Vectors | Shutterstock
-# Technology Images, Stock Photos & Vectors | Shutterstock
-# Food Images, Stock Photos & Vectors | Shutterstock

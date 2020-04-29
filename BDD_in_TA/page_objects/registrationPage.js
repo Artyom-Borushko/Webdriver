@@ -12,11 +12,11 @@ class RegistrationPage extends BasePage {
 	}
 
 
-	async submitRegistration() {
+	async submitRegistration(email, password) {
 		await this.highlight(this.emailInputField);
-		await this.emailInputField.sendKeys('letmeenterpls26@gmail.com');
+		await this.emailInputField.sendKeys(email);
 		await this.highlight(this.passwordInputField);
-		await this.passwordInputField.sendKeys('iwanttoenterpls');
+		await this.passwordInputField.sendKeys(password);
 		await this.confirmRegistrationButton.click();
 	}
 

@@ -24,5 +24,4 @@ class PeoplePage extends BasePage {
 	}
 }
 
-
 module.exports = PeoplePage;
