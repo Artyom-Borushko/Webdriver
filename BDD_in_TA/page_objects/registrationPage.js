@@ -1,0 +1,28 @@
+const BasePage = require('./basePage');
+const waitForElement = require('../utils/waitFunction');
+
+
+class RegistrationPage extends BasePage {
+	constructor() {
+		super();
+		this.emailInputField = $$("input[data-automation='SignUpForm_email_input']").get(2);
+		this.passwordInputField = $$("input[data-automation='SignUpForm_password_input']").get(2);
+		this.confirmRegistrationButton = $$("button[data-automation='SignUpForm_submit_button']").get(2);
+		this.firstFeaturedArtist = $$('.oc_x_o');
+	}
+
+
+	async submitRegistration() {
+		await this.highlight(this.emailInputField);
+		await this.emailInputField.sendKeys('letmeenterpls26@gmail.com');
+		await this.highlight(this.passwordInputField);
+		await this.passwordInputField.sendKeys('iwanttoenterpls');
+		await this.confirmRegistrationButton.click();
+	}
+
+	async waitForHomePageAfterSignUp() {
+		return waitForElement(this.firstFeaturedArtist.get(4), 'clickable');
+	}
+}
+
+module.exports = RegistrationPage;

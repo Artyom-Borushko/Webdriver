@@ -12,3 +12,12 @@ npm run test-webdriver
 ```
 npm run test-shutterstock
 ```
+## Tags options
+```
+--tag "@outline"
+```
+
+## BDD
+```
+npm run test-bdd-framework
+```
