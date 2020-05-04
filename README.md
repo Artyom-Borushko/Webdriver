@@ -21,3 +21,8 @@ npm run test-shutterstock
 ```
 npm run test-bdd-framework
 ```
+
+## API
+```
+npm run test-api
+```

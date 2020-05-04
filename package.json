@@ -12,7 +12,8 @@
     "test-webdriver": "node ./webdriver/webdriver_async",
     "test-wd-advanced": "protractor ./selenium_wd_advanced/config/config.js",
     "test-ta-frameworks": "protractor ./basic_knowledge_of_TA_frameworks/config/config.js",
-    "test-bdd-framework": "protractor ./BDD_in_TA/config/protractorConfig.js"
+    "test-bdd-framework": "protractor ./BDD_in_TA/config/protractorConfig.js",
+    "test-api": "mocha --config ./AT_of_web_services/config/mocha.config.js"
   },
   "repository": {
     "type": "git",
@@ -27,19 +28,22 @@
   "dependencies": {
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
+    "chai-http": "^4.3.0",
     "chromedriver": "^2.46.0",
-    "jasmine": "^3.5.0",
-    "mocha": "^7.1.1",
-    "mochawesome": "^3.0.3",
-    "protractor": "^5.4.3",
-    "selenium-webdriver": "^4.0.0-alpha.7",
-    "winston": "^3.2.1",
     "cucumber": "^6.0.5",
     "cucumber-html-reporter": "^5.1.0",
     "cucumber-junit-convert": "^1.1.0",
     "cucumber-pretty": "^6.0.0",
     "fs-extra": "^9.0.0",
+    "jasmine": "^3.5.0",
+    "mocha": "^7.1.1",
+    "mochawesome": "^3.0.3",
+    "protractor": "^5.4.3",
     "protractor-cucumber-framework": "^6.2.1",
+    "request": "^2.88.2",
+    "request-promise-native": "^1.0.8",
+    "selenium-webdriver": "^4.0.0-alpha.7",
+    "winston": "^3.2.1",
     "yargs": "^15.3.1"
   },
   "devDependencies": {
